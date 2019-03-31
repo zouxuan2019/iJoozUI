@@ -1,7 +1,6 @@
 language: csharp
 mono: none
 donet: 2.1.0
-
 jobs:
   include:
      - stage: build
