@@ -2,12 +2,14 @@ language: csharp
 mono: none
 donet: 2.1.0
 
-- stage: build
- script:
-  - dotnet restore
-  - dotnet build
+jobs:
+  include:
+     - stage: build
+       script:
+       dotnet restore
+       dotnet build
 
-- stage: deploy
-deploy:
-  provider: azure_web_apps
-  verbose: true
+    - stage: deploy
+      deploy:
+      provider: azure_web_apps
+      verbose: true
