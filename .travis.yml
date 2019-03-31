@@ -3,8 +3,6 @@ mono: none
 donet: 2.1.0
 jobs:
   include:
-    - stage: download depencency
-      script: dotnet restore
     - stage: build
       script: dotnet build
     - stage: deploy
