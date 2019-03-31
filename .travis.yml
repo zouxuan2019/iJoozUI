@@ -9,6 +9,5 @@ donet: 2.1.0
 
 - stage: deploy
 deploy:
-  script:
   provider: azure_web_apps
   verbose: true
